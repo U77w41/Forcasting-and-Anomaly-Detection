@@ -1,0 +1,4 @@
+outs:
+- md5: 153d243550ddde5e425800e2785596b6
+  size: 42026988
+  path: walmart_cleaned.csv

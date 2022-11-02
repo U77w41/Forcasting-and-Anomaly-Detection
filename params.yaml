@@ -1,0 +1,26 @@
+pre_processing:
+  to_drop: "Unnamed: 0",'MarkDown1', 'MarkDown2', 'MarkDown3', 'MarkDown4', 'MarkDown5'
+  index: "Date"
+  to_normalize: 'Temperature','Weekly_Sales', 'Fuel_Price', 'CPI', 'Unemployment', 'Total_Markdown', "Size"
+
+Isolation_Forest_training:
+  n_estimators: 1000
+  max_samples: len(metrics_df)
+  contamination: 'auto'
+  bootstrap: False
+  n_jobs: -1
+  random_state: 42
+  verbose: 0
+  max_features: 1.0
+  num_rows: 5
+KNN_for_anomaly_detection_training:
+  n_neighbors: 7
+  MAD_threshold: 20.5
+  loss_fun: 'absolute_error'
+LSTM_autoencoder_model:
+  optimizer: 'adam'
+  loss: 'mse'
+  nb_epochs: 40
+  batch_size: 16
+  validation_split: 0.05
+  MAD_threshold: 13

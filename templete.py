@@ -1,3 +1,4 @@
+# Running this code creates the required directories
 import os
 
 # Directories needed
